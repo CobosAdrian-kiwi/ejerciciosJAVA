@@ -11,7 +11,7 @@ public class Ejercicio10Correccion {
 		final String nocapicua = "El numero no es capicua";
 		
 		//pedir al usuario el número
-		System.out.println("Dime el número a comprobar");
+		System.out.println("Dime el número a comprobar entre 0 y 9999");
 		numUsu = sc.nextInt();
 		
 		//Comparar si esta entre 0 y 9999

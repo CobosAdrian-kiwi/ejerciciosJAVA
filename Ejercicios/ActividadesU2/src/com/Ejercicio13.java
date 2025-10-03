@@ -44,7 +44,7 @@ class Ejercicio13 {
 
 		//comprobamos que el formato es válido
 		if (horas < 0 || horas > 23 || mins <0 || mins > 59 || secs <0 || secs > 59) {
-			System.out.println("El formato dado no es válido");
+			System.err.println("El formato dado no es válido");
 		}else {
 			//horas09, mins09, secs09
 			if (horas >=0 && horas <=9 && mins >=0 && mins <=9 && secs >=0 && secs <=9) {

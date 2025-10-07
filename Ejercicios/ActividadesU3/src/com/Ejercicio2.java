@@ -36,6 +36,7 @@ public class Ejercicio2 {
 				
 				//la suma sea a la edad introducida más lo que mas llevamos
 				sumaEdades = sumaEdades + edadAlum;
+				//= sumaEdades += edadAlum
 
 				//si es igual o mayor de 18 le sumamos 1 a mayores de edad
 				if (edadAlum >= 18) {

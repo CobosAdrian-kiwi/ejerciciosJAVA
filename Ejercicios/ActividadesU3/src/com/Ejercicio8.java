@@ -21,7 +21,7 @@ public class Ejercicio8 {
 		
 		//Hacemos que las iteraciones sean iguales a numUsu
 		//Definimos que el resultado sea 1 para que al multiplicarlo despues no cambie nada
-		numUsuIter = numUsu;
+		numUsuIter = Math.abs(numUsu);
 		multiRestult = 1;
 		
 		//Siempre y cuando las iteraciones sean mayor a 1 lo multiplicamos 
@@ -34,6 +34,10 @@ public class Ejercicio8 {
 			if (numUsuIter > 1) {
 				numUsuIter--;
 			}
+		}
+		
+		if (numUsu <0) {
+			multiRestult *= -1;
 		}
 		//le damos el resultado al usuario con el numero original y el resultado
 		System.out.println(numUsu+"! = "+multiRestult);

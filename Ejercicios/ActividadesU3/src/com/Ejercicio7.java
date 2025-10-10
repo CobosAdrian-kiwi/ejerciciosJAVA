@@ -8,7 +8,7 @@ public class Ejercicio7 {
 		int multi_i;
 		
 		//Enunciado
-		System.out.println("Numeros impares menores al 10");
+		System.out.println("10 primeros numeros impares");
 		
 		//le ponemos de valor inicial 1 porque al multiplicar no afecta el resultado
 		multi_i = 1;
@@ -27,6 +27,6 @@ public class Ejercicio7 {
 		//multiplicar por el acumulador
 		
 		//Imprimimos el resultado
-		System.out.println(multi_i);
+		System.out.println("Producto de los números: "+multi_i);
 	}
 }

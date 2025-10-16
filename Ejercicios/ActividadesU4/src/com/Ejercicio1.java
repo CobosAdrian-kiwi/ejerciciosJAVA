@@ -1,10 +1,24 @@
 package com;
 
-public class Ejercicio1 {
+/*
+ * Diseñar la función eco() a la que se le pasa como 
+ * parámetro un número n y muestra por pantalla n veces el 
+ * mensaje “Eco ...”.
+ */
 
+public class Ejercicio1 {
+	
+	//MAIN 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		eco(3);
 
 	}
-
+	
+	//FUNCIONES
+	public static void eco(int veces) {
+		while(veces > 0) {
+			System.out.println("eco...");
+			veces--;
+		}
+	}
 }

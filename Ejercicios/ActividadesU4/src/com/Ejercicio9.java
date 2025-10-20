@@ -2,29 +2,21 @@ package com;
 
 import java.util.Scanner;
 
-/*
- * Escribir una función que, dado un entero, devuelva el número de divisores 
- * primos que tiene.
- */
-
-public class Ejercicio8 {
+public class Ejercicio9 {
 	
 	//MAIN
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		//Declaramos variables
-		int num, num_primos;
+		int num;
 		
 		//Le pedimos al usuario el numero a comprobar
 		System.out.println("Introduce el numero a comprobar");
 		num = sc.nextInt();
 		
-		//Guardamos la funcion en la variable
-		num_primos = divisores(num);
+		divisores(num);
 		
-		//Imprimimos la variable
-		System.out.println(num_primos);
 		sc.close();
 	}
 	
@@ -38,7 +30,7 @@ public class Ejercicio8 {
 		*  si el resto es 0 en alguno de los casos la division es redonda
 		*  y numero no es primo por lo que le ponemos es_primo como false
 		*  y rompemos el bucle
-
+		*
 		for(int divisor = 2; divisor <= Math.sqrt(numero); divisor++) {
 			if ((numero % divisor) == 0) {
 				es_primo = false;
@@ -49,25 +41,24 @@ public class Ejercicio8 {
 	}
 */	
 	//Funcion para saber todos los divisores de un numero y saber si son primos
-	public static int divisores(int numero ) {
-		int cant_num_primos = 0;
+	public static void divisores(int numero ) {
 		
 		/*
 		* Hacemos un bucle en el que cada iteracion se divide con el numero
 		* introducido, despues comprobamos que el resto sea 0 y se ejecuta la funcio
 		* primo() con la iteracion actual, por ultimo se comprueba si es primo y se
-		* añade al acumulador que se devuelve a //MAIN
+		* imprime por pantalla
 		*/
 		for(int i = 1; i < numero; i++) {
 			if (numero % i == 0 && i > 1) {
 				boolean es_primo = Ejercicio7.primo(i);
 				
 				if (es_primo == true) {
-					cant_num_primos++;
+					System.out.println(i);
 				}
 				
 			}
 		}
-		return cant_num_primos;
 	}
 }
+

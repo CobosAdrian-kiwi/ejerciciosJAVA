@@ -14,7 +14,6 @@ public class Ejercicio10 {
 		Scanner sc = new Scanner(System.in);
 		int num1, num2, suma_divi1, suma_divi2; //Datos del usuario
 		final String mensaje = "La suma de los divisores de ";
-		boolean amigos;
 		
 		//que el usuario de los datos
 		System.out.println("Dime 2 numero para saber si son amigos o no");

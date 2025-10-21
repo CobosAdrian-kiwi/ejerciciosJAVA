@@ -49,11 +49,11 @@ public class Ejercicio9 {
 		* primo() con la iteracion actual, por ultimo se comprueba si es primo y se
 		* imprime por pantalla
 		*/
-		for(int i = 1; i < numero; i++) {
-			if (numero % i == 0 && i > 1) {
+		for(int i = 2; i < numero; i++) {
+			if (numero % i == 0) {
 				boolean es_primo = Ejercicio7.primo(i);
 				
-				if (es_primo == true) {
+				if (es_primo) {
 					System.out.println(i);
 				}
 				

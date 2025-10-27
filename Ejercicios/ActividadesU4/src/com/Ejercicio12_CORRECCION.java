@@ -2,6 +2,8 @@ package com;
 
 import java.util.Scanner;
 
+import javax.sound.midi.SysexMessage;
+
 public class Ejercicio12_CORRECCION {
 
 	//MAIN
@@ -54,7 +56,12 @@ public class Ejercicio12_CORRECCION {
 			resultado = a * b;
 			break;
 		case 4:
-			resultado = a / b;
+			if(b != 0) {
+				resultado = a / b;
+			}else {
+				resultado = 0;
+				System.err.println("No se puede dividir entre 0");
+			}
 			break;
 		default:
 			System.err.println("Numero/s no válidos");

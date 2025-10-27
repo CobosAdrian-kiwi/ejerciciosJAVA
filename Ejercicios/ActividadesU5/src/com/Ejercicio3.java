@@ -20,7 +20,13 @@ public class Ejercicio3 {
 		Ejercicio2.rellenarTabla(tabla);
 		
 		double media_positivos = mediaTabla(tabla, 1);
-		System.out.println(media_positivos);
+		System.out.println("Media de los números positivos introducidos: "+media_positivos);
+		double media_negativos = mediaTabla(tabla, 2);
+		System.out.println("Media de los números negativos introducidos: "+media_negativos);
+		
+		int contador_ceros = contadorCeros(tabla);
+		System.out.println("Cantidad de 0 introducidos: "+ contador_ceros);
+		
 		
 	}
 	
@@ -34,22 +40,37 @@ public class Ejercicio3 {
 		
 		for(int i = 0; i < tabla.length; i++) {
 			
-			if(signo == 1) {
-				if(i > 0) {
+			///Por cada iteracion que esté vamos a comparar su equivalente
+			///en la tabla y depende del signo introducido, 1 para positivos
+			///y 2 para negativos asi en el //MAIN ejecutamos esta función
+			///2 veces una para los positivos y otra para los negativos
+			if(signo == 1 && tabla[i] > 0) {
 					acumulador += tabla[i];
 					contador++;
-				}
-			}else if (signo == 2) {
-				if(i < 0) {
+			}else if (signo == 2 && tabla[i] < 0) {
 					acumulador += tabla[i];
 					contador++;
-				}
 			}
 			
 		}
 		
+		//Aquí hacemos la media
 		media = acumulador / contador;
 		
 		return media;
+	}
+	
+	//FUNCION para contar los 0
+	public static int contadorCeros(int[] tabla) {
+		int contador0 = 0;
+		
+		//Recorremos la tabla y si el numero de iteraciones actual
+		//es igual a 0 le añadimos 1 al contador y después devolvemos el contacor 
+		for(int i = 0; i < tabla.length; i++) {
+			if (tabla[i] == 0) {
+				contador0++;
+			}
+		}
+		return contador0;
 	}
 }

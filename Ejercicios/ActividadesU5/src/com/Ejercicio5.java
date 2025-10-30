@@ -64,7 +64,7 @@ public class Ejercicio5 {
 			}
 			
 			
-		}while(acumulador < combinacion_correcta.length);
+		}while(acumulador <= combinacion_correcta.length);
 		System.out.println("\nHAS GANADO");
 	}
 	

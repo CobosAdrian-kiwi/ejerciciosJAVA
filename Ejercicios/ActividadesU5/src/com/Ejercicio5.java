@@ -19,12 +19,16 @@ public class Ejercicio5 {
 		System.out.println("Dime como de largo va a ser la combinación correcta");
 		largo = sc.nextInt();
 		
+		if(largo > 5 || largo < 1 ) {
+			System.err.println("Entre 1 y 5 he dicho...");
+		}else {
+		
 		///Hacer la tabla de soluciones
 		int[] combinacion_correcta = new int[largo]; //Definir su longitud
 		
 		///Hacer un bucle para calcular los aleatorios de 1 a 5 en cada índice
 		for (int i = 0; i < combinacion_correcta.length; i++) {
-			combinacion_correcta[i] = (int)(Math.random() * 5 ) + 1; //Calculamos números entre 1 y 5
+			combinacion_correcta[i] = (int)(Math.random() * 9 ) + 1; //Calculamos números entre 1 y 5
 			
 			//Imprimimos la solucion para las pruebas (Comentar cuando no se hagan pruebas)
 			/*if (i == 0) {
@@ -66,6 +70,7 @@ public class Ejercicio5 {
 			
 		}while(acumulador <= combinacion_correcta.length);
 		System.out.println("\nHAS GANADO");
+		}
 	}
 	
 	//-----FUNCIONES-----

@@ -19,7 +19,7 @@ public class Ejercicio8 {
 		int numActual; //Numero actual
 		
 		do {
-			System.out.println("Escribe un número para añadir a la tabla (-1 para salir)");
+			System.out.println("Escibe un número para añadir a la tabla (-1 para salir)");
 			numActual = sc.nextInt();
 			
 		}while(numActual != -1);

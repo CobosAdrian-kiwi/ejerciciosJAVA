@@ -81,7 +81,7 @@ public class Ejercicio7 {
 			k++;
 		}
 		while (j < tablaB.length) {
-			tablaC[k] = tablaB[i];
+			tablaC[k] = tablaB[j];
 			j++;
 			k++;
 		}

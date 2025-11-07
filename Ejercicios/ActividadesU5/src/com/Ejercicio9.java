@@ -22,9 +22,9 @@ public class Ejercicio9 {
 		int num_alumno;
 		
 		//Intento 1 rellenar la tabla
-		for(int colum = 0; colum < 3; colum++) {
-			for(int filas = 0; filas < 5; filas++) {
-				System.out.println("Escribe la nota del trimestre "+(colum+1)+"y del alumno "+(filas+1));
+		for(int colum = 0; colum < notas[0].length; colum++) {
+			for(int filas = 0; filas < notas.length; filas++) {
+				System.out.println("Escribe la nota del trimestre "+(colum+1)+" y del alumno "+(filas+1));
 				notas[filas][colum] = sc.nextInt();
 			}
 		}
@@ -57,12 +57,11 @@ public class Ejercicio9 {
 	public static void imprimirMatriz(int[][] matriz) {
 		//Imprimir la matriz
 				for (int x=0; x < matriz.length; x++) {
-					  System.out.print("|");
 					  for (int y=0; y< matriz[x].length; y++) {
 					    System.out.print (matriz[x][y]);
 					    if (y!=matriz[x].length-1) System.out.print("\t");
 					  }
-					  System.out.println("|");
+					  System.out.println();
 					}
 	}
 	

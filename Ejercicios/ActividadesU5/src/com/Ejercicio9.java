@@ -31,11 +31,11 @@ public class Ejercicio9 {
 		
 		imprimirMatriz(notas);
 		
-		media1 = mediaColumnasMatriz(notas, 0);
+		media1 = mediaColumnaMatriz(notas, 0);
 		System.out.println("Media primer trimestre: "+media1);
-		media2 = mediaColumnasMatriz(notas, 1);
+		media2 = mediaColumnaMatriz(notas, 1);
 		System.out.println("Media primer trimestre: "+media2);
-		media3 = mediaColumnasMatriz(notas, 2);
+		media3 = mediaColumnaMatriz(notas, 2);
 		System.out.println("Media primer trimestre: "+media3);
 		
 		
@@ -66,7 +66,7 @@ public class Ejercicio9 {
 	}
 	
 	//Media de cada trimestre
-	public static double mediaColumnasMatriz(int[][] m, int columna) {
+	public static double mediaColumnaMatriz(int[][] m, int columna) {
 		double acum = 0, media = 0;
 		for(int i = 0; i < m.length;i++) {
 			acum += m[i][columna];

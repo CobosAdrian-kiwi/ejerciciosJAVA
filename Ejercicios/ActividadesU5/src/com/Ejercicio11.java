@@ -21,12 +21,12 @@ public class Ejercicio11 {
 		int el_numero;
 		boolean es_igual_filas = false;
 		boolean es_igual_colum = false;
-		boolean es_igual_diagonales = false;
+		
 		
 		//Rellenar la matriz
 		for(int colum = 0; colum < matriz[0].length; colum++) {
 			for(int fila = 0; fila < matriz.length; fila++) {
-				System.out.println("Columna: "+(colum+1)+" , Fila: "+(fila+1));
+				System.out.println("Fila: "+(colum+1)+" , Columna: "+(fila+1));
 				matriz[colum][fila] = sc.nextInt();
 			}
 		}
@@ -63,6 +63,13 @@ public class Ejercicio11 {
 		}		
 		
 		System.out.println(es_igual_colum); //Se imprime por pruebas
+		
+		//Decimos si la matriz es mágica o no (si es_igual_filas o es_igual_colum es falsa)
+		if (es_igual_filas == false || es_igual_colum == false) {
+			System.out.println("La matriz NO es mágica");
+		}else if (es_igual_colum == true && es_igual_filas == true) {
+			System.out.println("La martiz ES mágica");
+		}
 	}
 	
 	//FUNCIONES
@@ -80,7 +87,7 @@ public class Ejercicio11 {
 		int result = 0;
 		
 		for(int i = 0; i < m.length;i++) {
-			result += m[columna][i];
+			result += m[i][columna];
 		}
 		
 		return result;

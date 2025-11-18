@@ -20,12 +20,30 @@ public class Ejercicio5 {
 	    //Tabla de las vocales
 	    char[] vocales = {'a','e','i','o','u','á','é','í','ó','ú'};
 		
+	    nombre_no_vocales = QuitarVocales(nombre_completo, vocales);
+	    
+	    System.out.println("Tu nombre sin vocales se ve así: "+ nombre_no_vocales);
+	    
 	}
 	//FUNCIONES
-	public static String ContarEspaciosEnBlanco(String cadena, String cadena_no_vocales) {
-			
+	public static StringBuilder QuitarVocales(String cadena, char[] vocales) {
+		 StringBuilder cadena_no_vocales = new StringBuilder();		
+		
 		//Hacemos un bucle que recorra toda la longitud de la tabla
 		for (int i = 0; i < cadena.length();i++) { 
+			char caracter = cadena.charAt(i);
+			boolean es_vocal = false;
+			
+			for (char vocal : vocales) {
+				if (Character.toLowerCase(caracter) == vocal) {
+					es_vocal = true;
+					break;
+				}
+			}
+			
+			if (es_vocal == false) {
+				cadena_no_vocales.append(caracter);
+			}
 			
 		}
 		

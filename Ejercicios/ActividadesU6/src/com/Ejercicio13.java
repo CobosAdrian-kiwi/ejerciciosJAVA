@@ -18,7 +18,8 @@ public class Ejercicio13 {
 		int[] tabla_veces = new int[1];
 		
 		//Frase a analizar
-		String frase = "En un lugar de la Mancha";
+		System.out.println("Inserte la frase a analizar");
+		String frase = sc.nextLine();
 		//Pasamos la frase a minuscula
 		frase = frase.toLowerCase();
 		
@@ -29,6 +30,7 @@ public class Ejercicio13 {
 			char c = frase.charAt(i);
 			
 			if (c == ' ') {
+				System.out.println(c+" ############");
 				continue;
 			}
 			

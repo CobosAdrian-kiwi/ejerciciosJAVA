@@ -15,27 +15,45 @@ public class Ejercicio14 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		StringBuilder frase_og =new StringBuilder("Caracola");
-		System.out.println(frase_og.length());
+		//Le decimos al usuario que introduzca la frase y la guardamos
+		System.out.println("Introduce la palabra / frase a hacer su anagrama");
+		StringBuilder frase_og =new StringBuilder(sc.nextLine());
+		int frase_og_long = frase_og.length(); //tambien guardamos su longitud para la aleatorización del anagrama
 		
-		StringBuilder frase_resolver = new StringBuilder();
+		String frase_copia = frase_og.toString(); //hacemos una copia de la palabra original para las comprobaiones
 		
-		for(int i = 0; i < frase_og.length(); i++) {
+		int contador_intentos = 0; //Hacemos una variable para contar los intentos
+		String frase; //Y una para hacer la frase que se vaya introduciendo (la que se comprueba al adivinar)
+		
+		StringBuilder frase_resolver = new StringBuilder(); //Hacemos un stringbuilder con el anagrama aleat.
+		
+		///Aleatorizamos el anagrama haciendo un bucle que recorra la palabra original hasta completar su longitud
+		///la longitud random es el caracter que va a salir de la frase_og y se va a meter en la frase_resolver
+		for(int i = 0; i < frase_og_long; i++) {
 			int longitudRandom = (int) (Math.random() * frase_og.length());
-			if (longitudRandom == frase_og.length()) {
+			if (longitudRandom == frase_og.length()) { //hacemos que si es la longitud mayor posible no se rompa
 				longitudRandom -= 1;
 			}
 			
-			System.out.println(longitudRandom);
-			frase_resolver.append(frase_og.charAt(longitudRandom));
+			frase_resolver.append(frase_og.charAt(longitudRandom)); //Metemos el caracter en el anagrama aleat
 			
-			frase_og.deleteCharAt(longitudRandom);
-			System.out.println(frase_og);
+			frase_og.deleteCharAt(longitudRandom); //Quitamos el de la frase original
 		}
 		
-		System.out.print(frase_resolver);		
+		//Hacer el bucle de juego en el que se tiene que adivinar la palabra
 		
-		//Estás usando frase_og.length() en el for como límite. Pero cada vez que borras un carácter, frase_og.length() disminuye. Esto significa que tu bucle no recorre todos los caracteres, porque frase_og.length() cambia dinámicamente.
+		do {
+			System.out.println("Adivinar esta palabra (intento "+contador_intentos + "). Palabra: \n"+frase_resolver);
+			System.out.println("Introduce la frase:");
+			frase = sc.nextLine();
+			
+			if (!frase.equals(frase_copia)) {
+				contador_intentos++;
+				System.out.println("Ese no es el anagrama correcto!");
+			}
+			
+		}while (!frase.equals(frase_copia));
 		
+		System.out.println("Correcto, la has adivinado! ^^");
 	}
 }

@@ -30,7 +30,7 @@ public class Ejercicio14 {
 		///Aleatorizamos el anagrama haciendo un bucle que recorra la palabra original hasta completar su longitud
 		///la longitud random es el caracter que va a salir de la frase_og y se va a meter en la frase_resolver
 		for(int i = 0; i < frase_og_long; i++) {
-			int longitudRandom = (int) (Math.random() * frase_og.length());
+			int longitudRandom = LongitudAleatoria(frase_og.length());
 			if (longitudRandom == frase_og.length()) { //hacemos que si es la longitud mayor posible no se rompa
 				longitudRandom -= 1;
 			}
@@ -55,5 +55,11 @@ public class Ejercicio14 {
 		}while (!frase.equals(frase_copia));
 		
 		System.out.println("Correcto, la has adivinado! ^^");
+	}
+	//FUNCIONES
+	public static int LongitudAleatoria(int longitud) {
+		int aleat;
+		aleat = (int) (Math.random() * longitud);
+		return aleat;
 	}
 }

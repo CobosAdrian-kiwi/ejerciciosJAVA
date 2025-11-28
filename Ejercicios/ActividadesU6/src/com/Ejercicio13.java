@@ -30,7 +30,6 @@ public class Ejercicio13 {
 			char c = frase.charAt(i);
 			
 			if (c == ' ') {
-				System.out.println(c+" ############");
 				continue;
 			}
 			

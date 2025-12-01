@@ -1,7 +1,7 @@
-package com;
+package cuenta_corriente;
 import java.util.Scanner;
 
-public class Ejercicio1 {
+public class Ej1Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

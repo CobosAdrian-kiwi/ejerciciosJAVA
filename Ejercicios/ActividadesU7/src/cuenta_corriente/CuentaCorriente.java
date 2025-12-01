@@ -8,6 +8,7 @@ public class CuentaCorriente {
 	public String nombre;
 	protected String dni;
 	
+	//Ejercicio 5
 	static String banco = "BBVA";
 	
 	//Constructor
@@ -68,7 +69,8 @@ public class CuentaCorriente {
 				+ "\nNOMBRE DEL TITULAR: "+ nombre
 				+ "\nDNI DEL TITULAR: "+ dni
 				+ "\nSALDO ACTUAL: "+ saldo
-				+ "\nLÍMITE DE DESCUBIERTO " + limitDescub);
+				+ "\nLÍMITE DE DESCUBIERTO " + limitDescub
+				+ "\nBANCO: "+ banco);
 	}
 
 	//GETTERS Y SETTERS

@@ -1,4 +1,4 @@
-package texto;
+package com.texto.app;
 
 public class Texto {
 	//Atributos

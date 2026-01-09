@@ -24,6 +24,7 @@ class ControladorDNITest {
 	
 	@BeforeEach
 	void setUp() throws Exception {
+		System.out.println("Test - Antes de cada comprobacion");
 		controladorDNI = new ControladorDNI();
 	}
 

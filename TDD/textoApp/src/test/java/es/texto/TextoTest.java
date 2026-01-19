@@ -87,7 +87,7 @@ class TextoTest {
         String mensaje = ex.getMessage();
         assertEquals(mensajeEsperado, mensaje, "Mensaje de error incorrecto cuando el contenido inicial excede el máximo");
     }
-
+    
     @Test
     @DisplayName("Constructor(contenidoInicial, maxLongitud): lanza excepción si maxLongitud <= 0 (mensaje comprobado)")
     void constructorConContenido_maxInvalido_lanzaExcepcion() {
@@ -98,7 +98,7 @@ class TextoTest {
         String mensaje = ex.getMessage();
         assertEquals(mensajeEsperado, mensaje, "Mensaje de error incorrecto para maxLongitud inválido");
     }
-
+    
     // -------------------------
     // AÑADIR CARACTERES (final)
     // -------------------------
@@ -118,7 +118,7 @@ class TextoTest {
         int longitud = texto.longitud();
         assertEquals(longitudEsperada, longitud, "La longitud debe incrementarse tras añadir un carácter");
     }
-
+    
     @Test
     @DisplayName("anadirFinal(char): si está lleno no modifica y devuelve false")
     void anadirFinal_char_sinEspacio_devuelveFalse() {
@@ -132,7 +132,7 @@ class TextoTest {
         String contenido = t.getContenido();
         assertEquals(contenidoEsperado, contenido, "No debe modificar el contenido si no hay espacio");
     }
-
+    
     // -------------------------
     // AÑADIR CARACTERES (inicio)
     // -------------------------
@@ -150,7 +150,7 @@ class TextoTest {
         String contenido = t.getContenido();
         assertEquals(contenidoEsperado, contenido, "Debe anteponer el carácter al contenido existente");
     }
-
+    
     @Test
     @DisplayName("anadirInicio(char): si está lleno no modifica y devuelve false")
     void anadirInicio_char_sinEspacio_devuelveFalse() {
@@ -168,7 +168,7 @@ class TextoTest {
     // -------------------------
     // AÑADIR CADENA (final)
     // -------------------------
-
+    
     @Test
     @DisplayName("anadirFinal(String): añade cadena completa si cabe y devuelve true")
     void anadirFinal_string_cabe_devuelveTrue() {
@@ -186,7 +186,7 @@ class TextoTest {
         int longitud = t.longitud();
         assertEquals(longitudEsperada, longitud, "La longitud debe coincidir con el máximo tras añadir");
     }
-
+    
     @Test
     @DisplayName("anadirFinal(String): si no cabe NO modifica y devuelve false")
     void anadirFinal_string_noCabe_noModifica_devuelveFalse() {
@@ -200,7 +200,7 @@ class TextoTest {
         String contenido = t.getContenido();
         assertEquals(contenidoEsperado, contenido, "No debe modificar el contenido si la cadena no cabe");
     }
-
+   
     @Test
     @DisplayName("anadirFinal(String): lanza excepción si la cadena es null (mensaje comprobado)")
     void anadirFinal_string_null_lanzaExcepcion() {
@@ -226,7 +226,7 @@ class TextoTest {
         String contenido = t.getContenido();
         assertEquals(contenidoEsperado, contenido, "El contenido no debe cambiar al añadir una cadena vacía");
     }
-
+    
     // -------------------------
     // AÑADIR CADENA (inicio)
     // -------------------------
@@ -284,7 +284,7 @@ class TextoTest {
         String contenido = t.getContenido();
         assertEquals(contenidoEsperado, contenido, "El contenido no debe cambiar al añadir una cadena vacía");
     }
-
+    
     // -------------------------
     // CONTEO DE VOCALES
     // -------------------------
@@ -296,7 +296,7 @@ class TextoTest {
         int resultado = texto.contarVocales();
         assertEquals(resultadoEsperado, resultado, "El número de vocales en un texto vacío debe ser 0");
     }
-
+    
     @Test
     @DisplayName("contarVocales(): cuenta vocales mayúsculas y minúsculas (AEIOUaeiou)")
     void contarVocales_cuentaMayusMinus() {
@@ -306,7 +306,7 @@ class TextoTest {
         int resultado = t.contarVocales();
         assertEquals(resultadoEsperado, resultado, "Debe contar vocales ignorando mayúsculas/minúsculas y símbolos");
     }
-
+    
     @Test
     @DisplayName("contarVocales(): no cuenta letras no vocales ni signos")
     void contarVocales_noCuentaConsonantesNiSignos() {
@@ -316,7 +316,7 @@ class TextoTest {
         int resultado = t.contarVocales();
         assertEquals(resultadoEsperado, resultado, "No debe contar consonantes ni signos como vocales");
     }
-
+    
     // -------------------------
     // CONSISTENCIA DE MÉTODOS
     // -------------------------

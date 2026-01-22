@@ -30,4 +30,8 @@ public class SintoniDigiFM {
 	public void Display() {
 		System.out.println("Frecuencia actual: "+ frecuencia + " MHz");
 	}
+	
+	public double getFrecuencia() {
+		return frecuencia;
+	}
 }

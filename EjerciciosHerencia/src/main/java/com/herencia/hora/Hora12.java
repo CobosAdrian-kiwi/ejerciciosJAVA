@@ -36,4 +36,23 @@ public class Hora12 extends Hora {
 			super.minuto++;
 		}
 	}
+	
+	@Override
+	public void setHora(int valor) {
+		if (valor > 23 || valor <=  0) super.hora = 0;
+		if (valor > 12) {
+			
+			if (periodo == periodo.AM) {
+				periodo = periodo.PM;
+			}else {
+				periodo = periodo.AM;
+			}
+			
+			super.hora = valor -12;
+			
+		}else {
+			super.hora = valor;
+			
+		}
+	}
 }

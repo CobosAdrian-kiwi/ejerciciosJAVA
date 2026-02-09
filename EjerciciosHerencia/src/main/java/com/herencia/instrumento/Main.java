@@ -7,6 +7,14 @@ public class Main {
 		Campana campana = new Campana();
 		
 		piano.add(Nota.Do);
+		piano.add(Nota.Re);
+		
+		piano.interpretar();
+		
+		campana.add(Nota.Fa);
+		campana.add(Nota.Si);
+		
+		campana.interpretar();
 	}
 
 }

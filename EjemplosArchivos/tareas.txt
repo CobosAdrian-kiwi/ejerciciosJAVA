@@ -1,0 +1,2 @@
+1;Crear formulario;Programación;pendiente
+2;Leer archivo;Entornos;hecha

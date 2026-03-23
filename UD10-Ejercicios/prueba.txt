@@ -1,0 +1,2 @@
+Este es el archivo de prueba.txt
+se tiene que leer si nombre es ""

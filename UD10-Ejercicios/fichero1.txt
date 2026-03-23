@@ -1,0 +1,4 @@
+este es el fichero1
+este fichero tiene varias lineas
+tiene que leerse todas las líneas
+si no está mal
